@@ -9,7 +9,20 @@
 </head>
 
 <body>
+  <script>
+    function createGame(gameName) {
+    let score = 0;
+    return function win() {
+      score++;
+      console.log(`Your ${gameName} score is ${score}`);
+      return score;
+    }
+  }
 
+  const hockeyGame = createGame('hockey');
+  const footballGame = createGame('football');
+  const basketballGame = createGame('basketball');
+  </script>
 </body>
 
 </html>
